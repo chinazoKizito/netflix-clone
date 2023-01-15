@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Netflix Sans', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    line-height: 33px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+header figure img {
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+main{
+    margin-top: 100px;
+}
+
+main h2{
+    width: 336px;
+    height: 48px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 82px;
+    margin-left: 470px;
+}
+
+.profile-cards-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.profile-cards-container figure{
+    margin-left: 30px;
+    height: 150px;
+    width: 150px;
+}
+.profile-cards-container figure img{
+    width: 100%;
+}
+.profile-cards-container figure .add-icon{
+    width: 100px;
+    width: 100px;
+}
+.profile-cards-container figure figcaption{
+    text-align: center;
+} 
+
+.profile-cards-container figure figcaption a{
+    text-decoration: none;
+    color: #777;
+}
+main a h3{
+    margin-left: 500px;
+    color: #777;
+    margin-top: 95px;
+    border: 2px solid #777;
+    width: 220px;
+    padding: 9px 6px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+main a{
+    text-decoration: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+    header figure img {
+        width: 80px;
+    }
+    
+
+    main{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 10px;
+    }
+
+    main h2{
+        font-size: 25px;
+        margin-left: 85px;
+        }
+
+    .profile-cards-container figure {
+        margin-left: 10px;
+        }
+
+    figcaption{
+        font-size: 13px;
+    }
+
+    main a h3{
+        font: 16px;
+        margin-left: 50px;
+        margin-top: 15px;
+        padding: 7px 4px;
+    }
+
+
+}

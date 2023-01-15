@@ -1,0 +1,336 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Netflix Sans' Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+    color: #fff;
+}
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/header.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    padding: 10px 8%;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.netflix-logo{
+    width: 150px;
+    cursor: pointer;
+}
+
+.sign-in-button{
+    background-color: #db0001;
+    color:#fff;
+    font-size: 12px;
+    border-radius: 4px;
+    outline: 0;
+    border: 0;
+    padding: 7px 20px;
+    cursor: pointer;
+}
+
+.header-story-container{
+    text-align: center;
+    margin-top: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-story-container h1{
+    font-size: 52px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 650px;
+}
+
+.header-story-container h3{
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.signup-email{
+    background-color: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.signup-email input{
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+
+.signup-email button{
+    background-color: #db0001;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+}
+
+/*----------------Main------------------------------*/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5%;
+    font-size: 22px;
+}
+
+.our-services-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-top: 10px solid #303030;
+}
+
+.our-services-container article,
+.our-services-image{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.our-services-image img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+main h3{
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/*--------------Main  FAQ ---------------------*/
+
+.faq-container{
+    padding: 10px 20%;
+    text-align: center;
+    border-top: 10px solid #303030;
+}
+
+
+.faq-title{
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.questions-container {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 700px;
+    
+}
+
+.questions-container li{
+    list-style: none;
+    width:   100%;
+    padding: 5px;
+
+}
+
+.questions-container li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position:  relative;
+} 
+
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+input[type='radio']{
+    display: none;
+}
+
+.questions-container article{
+    background-color: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.questions-container input[type='radio']:checked + label  + article{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.questions-container input[type='radio']:checked + label::after{
+    transform: rotate(135deg);
+    
+}
+
+.faq-container .signup-email{
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+.faq-container small{
+    font-size: 13px;
+}
+
+/*----------------footer---------------*/
+footer{
+  padding: 50px 15%;
+  border-top: 10px solid #303030;
+  color: #777;
+}
+
+footer .footer-title{
+    font-size: 18px;
+    font-weight: 400;
+    color: #777;
+    text-decoration: none;
+}
+
+footer .row{
+    margin-top: 30px;
+    align-items: flex-start;
+    display: flex;
+}
+
+footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+
+}
+
+footer .col a{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.trademark{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/*-----------------Small Screen-----------------*/
+@media only screen and (max-width: 600px){
+    .netflix-logo{
+        width: 100px;
+    }
+
+    .sign-in-button{
+        padding: 5px 10px;
+    }
+    
+
+    .header-story-container{
+        position: relative;
+        transform: none;
+        top: 0px;
+        left: 0;
+
+    }
+
+    .header-story-container h1{
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 10px;
+    }
+
+    .signup-email button{
+        font-size: 12px;
+        padding: 10px 13px;
+    }
+
+    .our-services-container article,
+    .our-services-container figure{
+        flex-basis: 100%;
+    }
+
+    main h3{
+        font-size: 28px;
+        line-break: normal;
+    }
+
+    main p{
+        font-size: 15px;
+    }
+
+    .our-services-container:nth-child(2),
+    .our-services-container:nth-child(4){
+        flex-direction: column-reverse;
+    }
+    .our-services-container{
+        padding: 10px 0;
+    }
+
+    .faq-title{
+        font-size: 20px;
+    }
+    .questions-container article{
+        font-size: 14px;
+    }
+
+    .questions-container li label{
+        padding: 10px;
+        font-size: 14px;
+    }
+    label::after{
+        font-size: 22px;
+    }
+
+    footer .row{
+        flex-direction: column;
+    }
+
+    .faq-container .signup-email {
+        max-width: 850px;
+        margin: 20px auto 60px;
+    }
+    
+    .faq-container .signup-email button{
+        padding: 3px 20px;
+    }
+    .faq-container small {
+        font-size: 14px;
+    }
+}
